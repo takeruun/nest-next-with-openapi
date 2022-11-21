@@ -1,0 +1,26 @@
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: AppController_getHello
+      parameters: []
+      responses:
+        '200':
+          description: Hello API
+        '401':
+          description: 認証エラー
+info:
+  title: API description
+  description: ''
+  version: '1.0'
+  contact: {}
+tags: []
+servers:
+  - url: /
+components:
+  securitySchemes:
+    cookie:
+      type: apiKey
+      in: cookie
+      name: connect.sid
+  schemas: {}
